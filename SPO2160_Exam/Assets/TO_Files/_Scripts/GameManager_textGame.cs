@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class GameManager : MonoBehaviour
+public class GameManager_textGame : MonoBehaviour
 {
     public Canvas gameCanvas;
     public Button gameButton, restartButton;

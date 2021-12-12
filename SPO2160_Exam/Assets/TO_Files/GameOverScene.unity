@@ -432,7 +432,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c94e1fe5abdc3e45aad016ce947ba0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  logoutUrl: https://hera.nord.no/~01700340/SPO2160/lobby/unity/logout.php
+  logoutUrl: https://hera.nord.no/~344423/SPO_2160/Exam/unity/logout.php
   attemptsUsed: 0
   feedbackText: {fileID: 531973374}
 --- !u!1 &1265554784
