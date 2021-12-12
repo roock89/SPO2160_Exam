@@ -2305,9 +2305,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3f4b3939397b10429ff0df1fd84ae81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loginUrl: https://hera.nord.no/~344423/SPO_2160/Exam/unity/login.php
-  logoutUrl: https://hera.nord.no/~344423/SPO_2160/Exam/unity/logout.php
-  registerUrl: https://hera.nord.no/~344423/SPO_2160/lobby/registeruser.php
+  loginUrl: https://hera.nord.no/~351064/TANK/lobby/login.php
+  logoutUrl: https://hera.nord.no/~351064/TANK/lobby/logout.php
+  registerUrl: https://hera.nord.no/~351064/SPO21/lobby/registeruser.php
   loginCanvas: {fileID: 64738453}
   logoutCanvas: {fileID: 603602812}
   errorCanvas: {fileID: 24923508}
