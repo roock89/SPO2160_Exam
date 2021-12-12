@@ -380,7 +380,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &64738451
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1456,6 +1456,8 @@ MonoBehaviour:
   _highScorePanel: {fileID: 2801114520003913723, guid: 1c0b0064e05205c4b8b78c881bc24762,
     type: 3}
   ScrollContent: {fileID: 916785516}
+  HighscoreURL: https://hera.nord.no/~351064/TANK/lobby/highscorelist.php
+  scores: []
 --- !u!1 &591937216
 GameObject:
   m_ObjectHideFlags: 0
@@ -1851,7 +1853,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Leaderboard
+  m_Text: Top 10 Leaderboard
 --- !u!222 &759725955
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2207,7 +2209,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0.0002876039}
-  m_SizeDelta: {x: 3232, y: 0}
+  m_SizeDelta: {x: 3232, y: 1520.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &996758083
 GameObject:
@@ -2300,7 +2302,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 996758083}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f3f4b3939397b10429ff0df1fd84ae81, type: 3}
   m_Name: 
@@ -2666,7 +2668,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -4060,7 +4062,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1669733998
 MonoBehaviour:
   m_ObjectHideFlags: 0
