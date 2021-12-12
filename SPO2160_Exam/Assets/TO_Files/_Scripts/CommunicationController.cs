@@ -12,7 +12,7 @@ public class CommunicationController : MonoBehaviour
 {
     public string loginUrl, logoutUrl, registerUrl;
     private string username, password;
-    public Canvas loginCanvas, logoutCanvas, errorCanvas;
+    public Canvas loginCanvas, logoutCanvas, errorCanvas, ChallengerCanvas;
     public InputField usernameText, passwordText;
     public Text errorText, welcomeText;
     public Button loginButton;
@@ -68,6 +68,8 @@ public class CommunicationController : MonoBehaviour
         formData.Add(new MultipartFormDataSection("password", password));
 
         UnityWebRequest www = UnityWebRequest.Post(uri, formData);
+    
+
         yield return www.SendWebRequest();
         Debug.Log(www.downloadHandler.text);
 
@@ -86,6 +88,7 @@ public class CommunicationController : MonoBehaviour
 
             if (feedback.Length > 1)
             {
+
                 userId = feedback[1].ToString();
                 userId = new string(userId.Where(c => char.IsDigit(c)).ToArray());
                 Debug.Log("UserID: " + userId);
@@ -175,6 +178,7 @@ public class CommunicationController : MonoBehaviour
         loginCanvas.gameObject.SetActive(true);
         logoutCanvas.gameObject.SetActive(false);
         errorCanvas.gameObject.SetActive(false);
+        ChallengerCanvas.gameObject.SetActive(false);
         usernameText.text = passwordText.text = "";
         loginButton.interactable = false;
     }
@@ -184,6 +188,17 @@ public class CommunicationController : MonoBehaviour
         loginCanvas.gameObject.SetActive(false);
         logoutCanvas.gameObject.SetActive(true);
         errorCanvas.gameObject.SetActive(false);
+        ChallengerCanvas.gameObject.SetActive(false);
+        usernameText.text = passwordText.text = "";
+        loginButton.interactable = false;
+    }
+
+    public void ShowLeaderboard()
+    {
+        loginCanvas.gameObject.SetActive(false);
+        logoutCanvas.gameObject.SetActive(false);
+        errorCanvas.gameObject.SetActive(false);
+        ChallengerCanvas.gameObject.SetActive(true);
         usernameText.text = passwordText.text = "";
         loginButton.interactable = false;
     }
@@ -198,6 +213,7 @@ public class CommunicationController : MonoBehaviour
         loginCanvas.gameObject.SetActive(false);
         logoutCanvas.gameObject.SetActive(false);
         errorCanvas.gameObject.SetActive(true);
+        ChallengerCanvas.gameObject.SetActive(false);
         errorText.text = feedback;
     }
 
