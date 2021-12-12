@@ -12,7 +12,7 @@ public class ButtonManager : MonoBehaviour
     }
     public void SendNumber()
     {
-        _gm.SelectNumber(number);
+        // _gm.SelectNumber(number);
         gameObject.SetActive(false);
     }
 }

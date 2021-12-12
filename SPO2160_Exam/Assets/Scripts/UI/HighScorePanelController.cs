@@ -1,7 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
 
 public class HighScorePanelController : MonoBehaviour
 {
@@ -16,6 +16,7 @@ public class HighScorePanelController : MonoBehaviour
 
     public void challengePlayer()
     {
-
+        manager.ghostInputData = ghostInputs;
+        SceneManager.LoadScene(0);
     }
 }

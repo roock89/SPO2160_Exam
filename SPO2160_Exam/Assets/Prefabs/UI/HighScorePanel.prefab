@@ -34,7 +34,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 26.029907, y: 0}
+  m_AnchoredPosition: {x: 26.03003, y: 0}
   m_SizeDelta: {x: -1932.4597, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2801114519856543172
@@ -172,7 +172,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerText: {fileID: 2801114520258656656}
   ScoreText: {fileID: 2801114519856543173}
-  ghostInputs: 
 --- !u!1 &2801114520258656670
 GameObject:
   m_ObjectHideFlags: 0
@@ -452,7 +451,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 3168915451336515573}
         m_TargetAssemblyTypeName: HighScorePanelController, Assembly-CSharp
         m_MethodName: challengePlayer
         m_Mode: 1
