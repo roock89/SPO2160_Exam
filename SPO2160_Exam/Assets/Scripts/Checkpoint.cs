@@ -58,5 +58,14 @@ public class Checkpoint : MonoBehaviour
         {
             GhostLap = true;
         }
+
+        {
+        DieAndRespawn respawn = other.GetComponent<DieAndRespawn>();
+        if (respawn != null)
+            {
+                Debug.Log("Setting spawn point of " + other.name + " to location of " + name);
+                respawn.respawnPoint = gameObject.transform;
+            }    
+        }
     }
 }
