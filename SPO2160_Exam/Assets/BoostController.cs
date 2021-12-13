@@ -9,6 +9,7 @@ public class BoostController : MonoBehaviour
     //CarController carController;
 
     public float BoostAmount;
+    public float JumpAmount; 
 
 
     // Start is called before the first frame update
@@ -31,6 +32,12 @@ public class BoostController : MonoBehaviour
         if (other.CompareTag("SpeedBoost"))
         {
             rb.velocity = BoostAmount * transform.forward;
+        }
+
+        if (other.CompareTag("JumpZone"))
+        {
+            rb.velocity = JumpAmount * transform.up;
+            rb.velocity = 0f * transform.position;
         }
 
     }
