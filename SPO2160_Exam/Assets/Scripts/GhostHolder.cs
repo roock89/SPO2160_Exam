@@ -9,6 +9,7 @@ public class GhostHolder : ScriptableObject
     public bool isReplaying;
     public bool ResetGhost;
     public float recordFrequency = 20;
+    public float lapTime;
 
     public List<float> timeStamp;
     public List<Vector3> position;

@@ -78,6 +78,8 @@ public class LeaderboardController : MonoBehaviour
             {
                 controller.PlayerText.text = _split[0];
                 controller.ScoreText.text = _split[1]; 
+                Debug.LogWarning(_split[2]);
+                int.TryParse(_split[2], out controller.scoreID);
             }
             else
                 controller.PlayerText.text = _split[0];
