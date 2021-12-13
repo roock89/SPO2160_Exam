@@ -58,5 +58,16 @@ public class Checkpoint : MonoBehaviour
         {
             GhostLap = true;
         }
+
+        {
+
+        //Find the DieAndRespawn script on the player            
+        DieAndRespawn respawn = other.GetComponent<DieAndRespawn>();
+        if (respawn != null)
+            {
+                //Set the respawn point the same as the transform of the checkpoint
+                respawn.respawnPoint = gameObject.transform;
+            }    
+        }
     }
 }
