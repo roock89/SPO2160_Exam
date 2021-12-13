@@ -4,14 +4,15 @@ using UnityEngine;
 
 public class GhostPlayer : MonoBehaviour
 {
-
+    public GameManager GM;
     public GhostHolder ghost;
     private float timeValue;
     private int index1, index2;
 
     private void Awake()
     {
-        timeValue = 0;
+       // ghost = GM.DownloadedGhost;
+       // timeValue = 0;
     }
      // Update is called once per frame
     void Update()

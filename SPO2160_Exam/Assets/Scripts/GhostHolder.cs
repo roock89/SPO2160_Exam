@@ -7,7 +7,8 @@ public class GhostHolder : ScriptableObject
 {
     public bool isRecording;
     public bool isReplaying;
-    public float recordFrequency;
+    public bool ResetGhost;
+    public float recordFrequency = 20;
 
     public List<float> timeStamp;
     public List<Vector3> position;
@@ -15,7 +16,10 @@ public class GhostHolder : ScriptableObject
     // Start is called before the first frame update
     void Start()
     {
-        
+        if(ResetGhost == true)
+        {
+            ClearReplay();
+        }
     }
 
     // Update is called once per frame
