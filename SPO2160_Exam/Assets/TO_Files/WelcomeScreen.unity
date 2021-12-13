@@ -4387,7 +4387,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc7d38160df9ea8439a848ae4f0a20f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ghostInputData: 
+  ghostInputData: {fileID: 11400000, guid: 765667d15cdcc3e42929cedfc296565f, type: 2}
+  GhostDataURL: https://hera.nord.no/~351064/TANK/lobby/DownloadGhostData.php
 --- !u!4 &1884201148
 Transform:
   m_ObjectHideFlags: 0
