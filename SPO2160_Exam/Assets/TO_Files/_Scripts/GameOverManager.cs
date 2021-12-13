@@ -1,6 +1,5 @@
 ﻿using System.Collections;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEngine.Networking;
 using System.Collections.Generic;
@@ -8,25 +7,35 @@ using System.Collections.Generic;
 public class GameOverManager : MonoBehaviour
 {
     public string logoutUrl, savingScoreURL;
-    public int attemptsUsed;
-    public Text feedbackText, scoreText;
+    public GhostHolder playerData; 
 
     // Start is called before the first frame update
     void Start()
     {
-        attemptsUsed = PlayerPrefs.GetInt("AttemptsUsed");
-        feedbackText.text = "You guessed " + attemptsUsed.ToString() + " times";
-        StartCoroutine(SavingScore(savingScoreURL, attemptsUsed.ToString()));
+        StartCoroutine(SavingScore(savingScoreURL, playerData));
     }
 
-    public IEnumerator SavingScore(string uri, string score)
+    public IEnumerator SavingScore(string uri, GhostHolder data)
     {
         Debug.Log("Test score script: " + uri);
 
         List<IMultipartFormSection> formData = new List<IMultipartFormSection>();
 
         // Add username and password as separate form data sections!
-        formData.Add(new MultipartFormDataSection("score", score));
+        formData.Add(new MultipartFormDataSection("score", data.lapTime.ToString()));
+
+        string positionData = "";
+        foreach(Vector3 pos in data.position)
+        {
+            positionData += pos + ":";
+        }
+        positionData += ";";        
+        foreach(Vector3 pos in data.rotation)
+        {
+            positionData += pos + ":";
+        }
+
+        formData.Add(new MultipartFormDataSection("_position", positionData));
 
         UnityWebRequest www = UnityWebRequest.Post(uri, formData);
         yield return www.SendWebRequest();
@@ -38,19 +47,17 @@ public class GameOverManager : MonoBehaviour
             Debug.Log("More than one character received");
             //Split string into two parts using string.split
             string[] feedback = www.downloadHandler.text.Split(';');
-            score = feedback[0].ToString();
+            Debug.Log(feedback[0].ToString());
         }
         else
         {
-            score = www.downloadHandler.text;
+            Debug.Log(www.downloadHandler.text);;
         }
 
         if (www.isNetworkError || www.isHttpError)
         {
-            Debug.Log(www.error);
+            Debug.LogError(www.error);
         }
-
-        scoreText.text = score;
     }
 
     public void RestartGame()

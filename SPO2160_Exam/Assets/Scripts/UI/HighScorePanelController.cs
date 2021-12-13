@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class HighScorePanelController : MonoBehaviour
 {
     public Text PlayerText, ScoreText;
-    private string ghostInputs;
+    public int scoreID;
     private GameManager manager;
 
     void Start()
@@ -16,7 +16,7 @@ public class HighScorePanelController : MonoBehaviour
 
     public void challengePlayer()
     {
-        manager.ghostInputData = ghostInputs;
+        // manager.;
         SceneManager.LoadScene(0);
     }
 }
