@@ -31,13 +31,13 @@ public class BoostController : MonoBehaviour
     {
         if (other.CompareTag("SpeedBoost"))
         {
-            rb.velocity = BoostAmount * transform.forward;
+            rb.velocity += (BoostAmount / 5) * transform.forward;
         }
 
         if (other.CompareTag("JumpZone"))
         {
-            rb.velocity = JumpAmount * transform.up;
-            rb.velocity = 0f * transform.position;
+            rb.velocity += (JumpAmount / 5) * transform.up;
+            //rb.velocity = 0f * transform.position;
         }
 
     }
