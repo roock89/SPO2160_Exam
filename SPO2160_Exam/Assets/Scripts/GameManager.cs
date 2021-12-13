@@ -19,7 +19,12 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
-    IEnumerator loadGhost(int scoreID)
+    public void getGhostData(int scoreID)
+    {
+        StartCoroutine(downloadGhostData(scoreID));
+    }
+
+    private IEnumerator downloadGhostData(int scoreID)
     {
         Debug.Log("Test score script: " + GhostDataURL);
 

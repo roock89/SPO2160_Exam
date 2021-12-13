@@ -16,7 +16,7 @@ public class HighScorePanelController : MonoBehaviour
 
     public void challengePlayer()
     {
-        // manager.;
+        manager.getGhostData(scoreID);
         SceneManager.LoadScene(0);
     }
 }
