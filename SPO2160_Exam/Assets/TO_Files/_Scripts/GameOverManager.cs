@@ -35,7 +35,7 @@ public class GameOverManager : MonoBehaviour
             positionData += pos + ":";
         }
 
-        formData.Add(new MultipartFormDataSection("_position", positionData));
+        formData.Add(new MultipartFormDataSection("input", positionData));
 
         UnityWebRequest www = UnityWebRequest.Post(uri, formData);
         yield return www.SendWebRequest();
