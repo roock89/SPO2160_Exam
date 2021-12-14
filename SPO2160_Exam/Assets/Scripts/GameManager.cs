@@ -31,6 +31,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("Test score script: " + GhostDataURL);
 
         List<IMultipartFormSection> formData = new List<IMultipartFormSection>();
+        formData.Add(new MultipartFormDataSection("_scoreID", scoreID.ToString()));
 
         UnityWebRequest www = UnityWebRequest.Post(GhostDataURL, formData);
         yield return www.SendWebRequest();
