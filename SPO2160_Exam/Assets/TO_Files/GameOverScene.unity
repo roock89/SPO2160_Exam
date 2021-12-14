@@ -327,7 +327,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: You guessed n times!
+  m_Text: 'Your time was: n'
 --- !u!222 &531973375
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -513,9 +513,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   logoutUrl: https://hera.nord.no/~01700340/SPO2160/lobby/unity/logout.php
   savingScoreURL: https://hera.nord.no/~351064/TANK/lobby/savescore.php
-  attemptsUsed: 0
-  feedbackText: {fileID: 531973374}
-  scoreText: {fileID: 875162130}
+  playerData: {fileID: 0}
 --- !u!1 &1265554784
 GameObject:
   m_ObjectHideFlags: 0
