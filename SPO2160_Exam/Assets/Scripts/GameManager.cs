@@ -69,7 +69,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            Debug.LogWarning("No replayable ghost data was found");
+            Debug.LogWarning("No replayable ghost data was found for challenger ID:" + scoreID);
         }
 
         if (www.isNetworkError || www.isHttpError)
