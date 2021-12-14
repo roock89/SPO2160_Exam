@@ -51,7 +51,7 @@ public class GameOverManager : MonoBehaviour
         }
         else
         {
-            Debug.Log(www.downloadHandler.text);;
+            Debug.Log(www.downloadHandler.text);
         }
 
         if (www.isNetworkError || www.isHttpError)
