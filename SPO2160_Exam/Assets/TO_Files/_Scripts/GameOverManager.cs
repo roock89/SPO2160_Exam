@@ -96,4 +96,9 @@ public class GameOverManager : MonoBehaviour
             }
         }
     }
+    public void MainMenu()
+    {
+        SceneManager.LoadScene(0);
+    }
+
 }
