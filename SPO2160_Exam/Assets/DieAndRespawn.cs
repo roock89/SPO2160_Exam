@@ -11,5 +11,6 @@ public class DieAndRespawn : MonoBehaviour
     public void HitAndRespawn()
     {
         transform.position = respawnPoint.transform.position;
+        transform.rotation = respawnPoint.rotation;
     }
 }
