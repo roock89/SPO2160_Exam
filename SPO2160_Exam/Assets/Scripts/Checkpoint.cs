@@ -4,23 +4,34 @@ using UnityEngine;
 
 public class Checkpoint : MonoBehaviour
 {
+    public int maxlap = 3, currentlap;
     public float Timer, LapTime;
     public bool Passed, RoundOver, Goal, GhostLap,PlayerLap;
-   
+    public RoundController RC;
     // Start is called before the first frame update
     void Start()
     {
-        
+        if(Goal == true)
+        {
+            RC = GameObject.Find("CheckpointParent").GetComponent<RoundController>();
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(currentlap>= maxlap)
+        {
+            //Insert gameover here, canvas text and buttons.
+        }
+        //LapTime is the final time of the entire lap. after that it resets the lap and allows the player to do more laps.
+        //if you want you can show the laptime on the game over screen.
         if(RoundOver == true)
         {
             LapTime = Timer;
             
             Passed = false;
+            currentlap++;
             RoundOver = false;
             Timer = 0;
         }
@@ -28,6 +39,7 @@ public class Checkpoint : MonoBehaviour
         { 
             Timer += Time.deltaTime;
          }
+       
        
     }
     private void OnTriggerEnter(Collider other)
@@ -44,10 +56,13 @@ public class Checkpoint : MonoBehaviour
         {
             //insert code to show time.
         }
-        if(other.tag == "Player" &&Goal == true)
+        
+         if(Goal == true && RC.currentCheckPoint > 10 && other.tag == "Player")
         {
+
             RoundOver = true;
-                PlayerLap = true;
+            PlayerLap = true;
+
         }
         if(other.tag == "Player")
         {

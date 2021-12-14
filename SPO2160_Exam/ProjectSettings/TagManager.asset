@@ -8,6 +8,7 @@ TagManager:
   - ResetDriftCollision
   - SpeedBoost
   - JumpZone
+  - checkPoint
   layers:
   - Default
   - TransparentFX
