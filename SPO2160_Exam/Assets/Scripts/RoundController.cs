@@ -1,6 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class RoundController : MonoBehaviour
 {
@@ -25,6 +24,8 @@ public class RoundController : MonoBehaviour
             currentCheckPoint++;
         }
        
+        if(currentCheckPoint == CheckPoints.Length)
+            SceneManager.LoadScene("GameOverScene");
     }
    
 }
