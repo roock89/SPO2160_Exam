@@ -5436,7 +5436,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c200f8fa7ac05b41a2ae860a4b4657e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BoostAmount: 40
+  BoostAmount: 30
   JumpAmount: 15
   SuperBoostAmount: 0
 --- !u!114 &566682097
