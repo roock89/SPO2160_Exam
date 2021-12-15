@@ -53,6 +53,7 @@ public class CommunicationController : MonoBehaviour
     public void LogoutUser()
     {
         StartCoroutine(Logout(logoutUrl));
+        this.enabled = true;
     }
 
     private IEnumerator Login(string uri)
@@ -166,6 +167,7 @@ public class CommunicationController : MonoBehaviour
                     usernameText.text = passwordText.text = "";
                     username = password = "";
                     loginButton.interactable = false;
+                    Debug.Log("Logout Successful!");
                     break;
                 default:
                     break;

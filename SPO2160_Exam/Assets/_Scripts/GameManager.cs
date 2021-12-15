@@ -11,8 +11,19 @@ public class GameManager : MonoBehaviour
     public string GhostDataURL;
 
     // Start is called before the first frame update
+    void StartMainMenu(Scene scene, LoadSceneMode mode)
+    {
+        if (Camera.main.GetComponent<CommunicationController>() != null)
+        {
+            Camera.main.GetComponent<CommunicationController>().enabled = true;
+        }
+
+    }
+
     void Start()
     {
+        SceneManager.sceneLoaded += StartMainMenu;
+
         if(iAmTheManager == null)
             iAmTheManager = this;
         else
@@ -36,7 +47,7 @@ public class GameManager : MonoBehaviour
         UnityWebRequest www = UnityWebRequest.Post(GhostDataURL, formData);
         yield return www.SendWebRequest();
         // Debug.Log(www.downloadHandler.text);
-        string[] inputs = new string[2];
+        string[] inputs;
         // Split string using space, semi colon, comma, dot
         if (www.downloadHandler.text.Length > 1)
         {
@@ -64,8 +75,11 @@ public class GameManager : MonoBehaviour
                 Vector3 _rot = new Vector3(x, y, z);
                 ghostInputData.rotation.Add(_rot);
             }
-            ghostInputData.isReplaying = true;
-            ghostInputData.isRecording = false;
+            string[] timestamps = inputs[2].Split(':');
+            foreach (string time in timestamps)
+            {
+                ghostInputData.timeStamp.Add(float.Parse(time));
+            }
         }
         else
         {

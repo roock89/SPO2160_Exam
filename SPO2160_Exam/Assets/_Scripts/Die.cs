@@ -36,6 +36,7 @@ public class Die : MonoBehaviour
             }
             if (timesFallen >= 3)
             {
+                Debug.Log("noob");
                 // Remove ghost data
                 ghost.ClearReplay();
 
@@ -44,7 +45,7 @@ public class Die : MonoBehaviour
                 Score.LapTime = 0;
 
                 // Send player over to Game Over scene
-                SceneManager.LoadScene("GameOverScene");
+                SceneManager.LoadScene(2);
             }
         }
     }

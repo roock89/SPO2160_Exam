@@ -45,6 +45,7 @@ public class LeaderboardController : MonoBehaviour
         {
             Debug.Log("More than one character received");
             //Split string into two parts using string.split
+            Debug.Log( www.downloadHandler.text);
             scores = www.downloadHandler.text.Split(';');
         }
         else
@@ -83,6 +84,7 @@ public class LeaderboardController : MonoBehaviour
             }
             else
                 controller.PlayerText.text = _split[0];
+            Debug.Log(spawn);
         }
         ScrollContent.transform.position -= new Vector3(0, 100 ,0); // correct starting position. might need a bigger number if loading more than 10 highscores
         
