@@ -5423,7 +5423,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4d276875c8c599408bdcb24e158e78c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ghost: {fileID: 11400000, guid: 765667d15cdcc3e42929cedfc296565f, type: 2}
+  ghost: {fileID: 11400000, guid: 8acf0ef8cea5c5946a9ab305c7e2096d, type: 2}
 --- !u!114 &2263101070869753289
 MonoBehaviour:
   m_ObjectHideFlags: 0
