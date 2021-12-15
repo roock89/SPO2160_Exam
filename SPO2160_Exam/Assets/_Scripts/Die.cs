@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class Die : MonoBehaviour
 {
     public int timesFallen = 0;
+    public GhostHolder ghost;
 
     //OnTrigger collects the RigidBody and DieAndRespawn script from the player
     void OnTriggerEnter(Collider other)
@@ -25,7 +26,7 @@ public class Die : MonoBehaviour
             if (timesFallen >= 3)
             {
                 // Remove ghost data
-
+                ghost.ClearReplay();
 
 
                 // Reset score.laptime
