@@ -9,21 +9,21 @@ public class BoostController : MonoBehaviour
     //CarController carController;
 
     public float BoostAmount;
-    public float JumpAmount; 
+    public float JumpAmount;
+    public float SuperBoostAmount;
 
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        //carController = GetComponent<CarController>();
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        //Debug.Log("Speed " + carController.CurrentSpeed);
+
     }
 
 
@@ -32,12 +32,18 @@ public class BoostController : MonoBehaviour
         if (other.CompareTag("SpeedBoost"))
         {
             rb.velocity += (BoostAmount / 5) * transform.forward;
+            Destroy(other.gameObject);
         }
 
         if (other.CompareTag("JumpZone"))
         {
             rb.velocity += (JumpAmount / 5) * transform.up;
             //rb.velocity = 0f * transform.position;
+        }
+
+        if (other.CompareTag("SuperSpeedZone"))
+        {
+            rb.velocity += (SuperBoostAmount / 5) * transform.forward;
         }
 
     }
