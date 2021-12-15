@@ -434,7 +434,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   logoutUrl: https://hera.nord.no/~01700340/SPO2160/lobby/unity/logout.php
   savingScoreURL: https://hera.nord.no/~351064/TANK/lobby/savescore.php
-  playerData: {fileID: 0}
+  playerData: {fileID: 11400000, guid: 8acf0ef8cea5c5946a9ab305c7e2096d, type: 2}
 --- !u!1 &1265554784
 GameObject:
   m_ObjectHideFlags: 0
@@ -551,10 +551,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04630c9cece4dfe45b682d225fb1d4fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  goalCheckpoint: {fileID: 1492642743753408792, guid: 868019bb5337278488b5f5f7e853ecf3,
-    type: 3}
   scoreText: {fileID: 531973374}
-  lapTime: 0
 --- !u!1 &1302794270
 GameObject:
   m_ObjectHideFlags: 0
