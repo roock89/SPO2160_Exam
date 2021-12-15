@@ -8,6 +8,8 @@ public class Score
 }
 public class Checkpoint : MonoBehaviour
 {
+    public int checkpointNumb;
+    public static int currentCheckpoint;
     public int maxlap = 3, currentlap;
     public float Timer;
     public bool Passed, RoundOver, Goal, GhostLap,PlayerLap;
@@ -15,6 +17,7 @@ public class Checkpoint : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        currentCheckpoint = 0;
         if(Goal == true)
         {
             RC = GameObject.Find("CheckpointParent").GetComponent<RoundController>();
@@ -61,7 +64,7 @@ public class Checkpoint : MonoBehaviour
             //insert code to show time.
         }
         
-         if(Goal == true && RC.currentCheckPoint > 10 && other.tag == "Player")
+         if(Goal == true && currentCheckpoint > 10 && other.tag == "Player")
         {
 
             RoundOver = true;
@@ -70,8 +73,13 @@ public class Checkpoint : MonoBehaviour
         }
         if(other.tag == "Player")
         {
-           // Ghost.currentCheckPoint++;
-           this.gameObject.GetComponent<Checkpoint>().Passed = true;
+            // Ghost.currentCheckPoint++;
+            if(currentCheckpoint == checkpointNumb)
+            {
+                Passed = true;
+                currentCheckpoint++;
+                Debug.Log(currentCheckpoint);
+            }
         }
         if(other.tag == "Ghost" && Goal == true)
         {
