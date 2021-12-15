@@ -2,10 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public class Score
+{
+    public static float LapTime;
+}
 public class Checkpoint : MonoBehaviour
 {
     public int maxlap = 3, currentlap;
-    public float Timer, LapTime;
+    public float Timer;
     public bool Passed, RoundOver, Goal, GhostLap,PlayerLap;
     public RoundController RC;
     // Start is called before the first frame update
@@ -28,7 +32,7 @@ public class Checkpoint : MonoBehaviour
         //if you want you can show the laptime on the game over screen.
         if(RoundOver == true)
         {
-            LapTime = Timer;
+            Score.LapTime = Timer;
             
             Passed = false;
             currentlap++;
