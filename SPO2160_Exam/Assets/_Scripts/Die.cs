@@ -7,7 +7,18 @@ public class Die : MonoBehaviour
 {
     public int timesFallen = 0;
     public GhostHolder ghost;
-
+    public Rigidbody PlayerRigidbody;
+    public DieAndRespawn ButtonRespawn;
+    private void Update()
+    {
+        //Press R to reset to previous checkpoint.
+        if (Input.GetKey(KeyCode.R))
+        {
+                ButtonRespawn.HitAndRespawn();
+                PlayerRigidbody.velocity = Vector3.zero;
+               // timesFallen++;
+        }
+    }
     //OnTrigger collects the RigidBody and DieAndRespawn script from the player
     void OnTriggerEnter(Collider other)
     {
