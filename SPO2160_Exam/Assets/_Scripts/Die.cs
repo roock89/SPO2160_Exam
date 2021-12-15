@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Die : MonoBehaviour
 {
@@ -23,8 +24,15 @@ public class Die : MonoBehaviour
             }
             if (timesFallen >= 3)
             {
-                // Activate Game Over
-                // Freeze game??
+                // Remove ghost data
+
+
+
+                // Reset score.laptime
+                Score.LapTime = 0;
+
+                // Send player over to Game Over scene
+                SceneManager.LoadScene("GameOverScene");
             }
         }
     }
