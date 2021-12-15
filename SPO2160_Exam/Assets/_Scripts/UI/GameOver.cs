@@ -10,6 +10,6 @@ public class GameOver : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        scoreText.text = "Your time was: " + (Score.LapTime / 60).ToString("00") + ":" + (Score.LapTime%60).ToString("00") + "seconds";
+        scoreText.text = "Your time was: " + (Score.LapTime / 60).ToString("00") + ":" + (Score.LapTime%60).ToString("00");
     }
 }
