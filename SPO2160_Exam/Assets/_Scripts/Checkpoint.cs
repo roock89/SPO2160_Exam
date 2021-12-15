@@ -78,7 +78,6 @@ public class Checkpoint : MonoBehaviour
             {
                 Passed = true;
                 currentCheckpoint++;
-                Debug.Log(currentCheckpoint);
             }
         }
         if(other.tag == "Ghost" && Goal == true)
