@@ -108,10 +108,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fd743b7c1c969f4da3ada5e75a556fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  checkpointNumb: 0
+  goalCheckpointMEGA: {fileID: 0}
+  checkpointMEGA: 0
+  isGoldenRoad: 0
+  maxlap: 1
+  currentlap: 0
   Timer: 0
-  LapTime: 0
   Passed: 0
   RoundOver: 0
-  Goal: 0
+  Goal: 1
   GhostLap: 0
   PlayerLap: 0
+  RC: {fileID: 0}

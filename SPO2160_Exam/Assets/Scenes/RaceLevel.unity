@@ -2667,6 +2667,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CheckPoints: []
+  GoalCheck: {fileID: 1612716514}
 --- !u!1 &189923924
 GameObject:
   m_ObjectHideFlags: 0
@@ -4169,6 +4170,11 @@ PrefabInstance:
     - target: {fileID: 1492642743753408796, guid: 868019bb5337278488b5f5f7e853ecf3,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1492642743753408797, guid: 868019bb5337278488b5f5f7e853ecf3,
+        type: 3}
+      propertyPath: Goal
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1492642743753408797, guid: 868019bb5337278488b5f5f7e853ecf3,
@@ -5958,6 +5964,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1492642743753408797, guid: 868019bb5337278488b5f5f7e853ecf3,
         type: 3}
+      propertyPath: Goal
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1492642743753408797, guid: 868019bb5337278488b5f5f7e853ecf3,
+        type: 3}
       propertyPath: isGoldenRoad
       value: 1
       objectReference: {fileID: 0}
@@ -6986,6 +6997,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1492642743753408797, guid: 868019bb5337278488b5f5f7e853ecf3,
         type: 3}
+      propertyPath: Goal
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1492642743753408797, guid: 868019bb5337278488b5f5f7e853ecf3,
+        type: 3}
       propertyPath: checkpointNumb
       value: 1
       objectReference: {fileID: 0}
@@ -7351,6 +7367,11 @@ PrefabInstance:
     - target: {fileID: 1492642743753408796, guid: 868019bb5337278488b5f5f7e853ecf3,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1492642743753408797, guid: 868019bb5337278488b5f5f7e853ecf3,
+        type: 3}
+      propertyPath: Goal
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1492642743753408797, guid: 868019bb5337278488b5f5f7e853ecf3,
@@ -9468,11 +9489,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1492642743753408797, guid: 868019bb5337278488b5f5f7e853ecf3,
         type: 3}
-      propertyPath: Goal
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1492642743753408797, guid: 868019bb5337278488b5f5f7e853ecf3,
-        type: 3}
       propertyPath: checkpointNumb
       value: 16
       objectReference: {fileID: 0}
@@ -9559,6 +9575,11 @@ PrefabInstance:
     - target: {fileID: 1492642743753408796, guid: 868019bb5337278488b5f5f7e853ecf3,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1492642743753408797, guid: 868019bb5337278488b5f5f7e853ecf3,
+        type: 3}
+      propertyPath: Goal
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1492642743753408797, guid: 868019bb5337278488b5f5f7e853ecf3,
@@ -9838,6 +9859,11 @@ PrefabInstance:
     - target: {fileID: 1492642743753408796, guid: 868019bb5337278488b5f5f7e853ecf3,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1492642743753408797, guid: 868019bb5337278488b5f5f7e853ecf3,
+        type: 3}
+      propertyPath: Goal
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1492642743753408797, guid: 868019bb5337278488b5f5f7e853ecf3,
@@ -12375,6 +12401,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1492642743753408797, guid: 868019bb5337278488b5f5f7e853ecf3,
         type: 3}
+      propertyPath: Goal
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1492642743753408797, guid: 868019bb5337278488b5f5f7e853ecf3,
+        type: 3}
       propertyPath: checkpointNumb
       value: 3
       objectReference: {fileID: 0}
@@ -13490,6 +13521,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1492642743753408797, guid: 868019bb5337278488b5f5f7e853ecf3,
         type: 3}
+      propertyPath: Goal
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1492642743753408797, guid: 868019bb5337278488b5f5f7e853ecf3,
+        type: 3}
       propertyPath: checkpointNumb
       value: 6
       objectReference: {fileID: 0}
@@ -13575,6 +13611,11 @@ PrefabInstance:
     - target: {fileID: 1492642743753408796, guid: 868019bb5337278488b5f5f7e853ecf3,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1492642743753408797, guid: 868019bb5337278488b5f5f7e853ecf3,
+        type: 3}
+      propertyPath: Goal
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1492642743753408797, guid: 868019bb5337278488b5f5f7e853ecf3,
@@ -14317,6 +14358,11 @@ PrefabInstance:
     - target: {fileID: 1492642743753408796, guid: 868019bb5337278488b5f5f7e853ecf3,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1492642743753408797, guid: 868019bb5337278488b5f5f7e853ecf3,
+        type: 3}
+      propertyPath: Goal
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1492642743753408797, guid: 868019bb5337278488b5f5f7e853ecf3,
@@ -20945,6 +20991,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1492642743753408797, guid: 868019bb5337278488b5f5f7e853ecf3,
         type: 3}
+      propertyPath: Goal
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1492642743753408797, guid: 868019bb5337278488b5f5f7e853ecf3,
+        type: 3}
       propertyPath: checkpointNumb
       value: 8
       objectReference: {fileID: 0}
@@ -21343,6 +21394,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1492642743753408797, guid: 868019bb5337278488b5f5f7e853ecf3,
         type: 3}
+      propertyPath: Goal
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1492642743753408797, guid: 868019bb5337278488b5f5f7e853ecf3,
+        type: 3}
       propertyPath: checkpointNumb
       value: 15
       objectReference: {fileID: 0}
@@ -21429,6 +21485,11 @@ PrefabInstance:
     - target: {fileID: 1492642743753408796, guid: 868019bb5337278488b5f5f7e853ecf3,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1492642743753408797, guid: 868019bb5337278488b5f5f7e853ecf3,
+        type: 3}
+      propertyPath: Goal
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1492642743753408797, guid: 868019bb5337278488b5f5f7e853ecf3,
@@ -23665,7 +23726,7 @@ PrefabInstance:
     - target: {fileID: 1492642743753408796, guid: 868019bb5337278488b5f5f7e853ecf3,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.72
+      value: 9.5
       objectReference: {fileID: 0}
     - target: {fileID: 1492642743753408796, guid: 868019bb5337278488b5f5f7e853ecf3,
         type: 3}
@@ -23705,6 +23766,11 @@ PrefabInstance:
     - target: {fileID: 1492642743753408796, guid: 868019bb5337278488b5f5f7e853ecf3,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1492642743753408797, guid: 868019bb5337278488b5f5f7e853ecf3,
+        type: 3}
+      propertyPath: Goal
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1492642743753408797, guid: 868019bb5337278488b5f5f7e853ecf3,
@@ -23990,6 +24056,11 @@ PrefabInstance:
     - target: {fileID: 1492642743753408796, guid: 868019bb5337278488b5f5f7e853ecf3,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1492642743753408797, guid: 868019bb5337278488b5f5f7e853ecf3,
+        type: 3}
+      propertyPath: Goal
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1492642743753408797, guid: 868019bb5337278488b5f5f7e853ecf3,
@@ -25238,6 +25309,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1492642743753408797, guid: 868019bb5337278488b5f5f7e853ecf3,
         type: 3}
+      propertyPath: Goal
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1492642743753408797, guid: 868019bb5337278488b5f5f7e853ecf3,
+        type: 3}
       propertyPath: checkpointNumb
       value: 12
       objectReference: {fileID: 0}
@@ -25695,6 +25771,11 @@ PrefabInstance:
     - target: {fileID: 1492642743753408796, guid: 868019bb5337278488b5f5f7e853ecf3,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1492642743753408797, guid: 868019bb5337278488b5f5f7e853ecf3,
+        type: 3}
+      propertyPath: Goal
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1492642743753408797, guid: 868019bb5337278488b5f5f7e853ecf3,
