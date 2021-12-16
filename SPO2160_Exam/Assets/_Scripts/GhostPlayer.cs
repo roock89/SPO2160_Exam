@@ -16,7 +16,7 @@ public class GhostPlayer : MonoBehaviour
      // Update is called once per frame
     void Update()
     {
-        timeValue += Time.unscaledDeltaTime;
+        timeValue += Time.deltaTime;
         if (ghost.isReplaying)
         {
             GetIndex();
