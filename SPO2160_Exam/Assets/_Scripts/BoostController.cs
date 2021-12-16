@@ -11,7 +11,8 @@ public class BoostController : MonoBehaviour
     public float BoostAmount;
     public float JumpAmount;
     public float SuperBoostAmount;
-
+    public GameObject wallOfChina;
+    public float wallActiveTime = 5f;
 
     // Start is called before the first frame update
     void Start()
@@ -41,12 +42,25 @@ public class BoostController : MonoBehaviour
             //rb.velocity = 0f * transform.position;
         }
 
-        
+        if (other.CompareTag("WallController"))
+        {
+            StopCoroutine(WallTimer());
+            StartCoroutine(WallTimer());
+            Destroy(other.gameObject);
+        }
+
         if (other.CompareTag("SuperSpeedZone"))
         {
             rb.velocity += (SuperBoostAmount / 5) * transform.forward;
             rb.velocity += -10 * transform.up;
         }
         
+    }
+
+    IEnumerator WallTimer()
+    {
+        wallOfChina.SetActive(true);
+        yield return new WaitForSeconds(wallActiveTime);
+        wallOfChina.SetActive(false);
     }
 }
