@@ -67,14 +67,14 @@ public class LeaderboardController : MonoBehaviour
         {
             Destroy(ScrollContent.GetChild(i).gameObject);
         }
-        ContentSize.sizeDelta = new Vector2(3237, 1520.5f); // resetting scroll content size
+        ContentSize.sizeDelta = new Vector2(3237, 2107.5f); // resetting scroll content size
         int ChallengerNumb = scores.Length; // number of scores loading in
-        ContentSize.sizeDelta = new Vector2(3237, (ChallengerNumb-1) * 230f); // ScrollContent total size
+        ContentSize.sizeDelta = new Vector2(3237, (ChallengerNumb-2) * 230f); // ScrollContent total size
         for(int i = 0; i < ChallengerNumb -1 && ChallengerNumb > 0; i++)
         {
             GameObject spawn = Instantiate(_highScorePanel);
             spawn.transform.SetParent(ScrollContent, false);
-            spawn.transform.localPosition = StartPos + new Vector3(0, i, 0) * -200; // position delta
+            spawn.transform.localPosition = StartPos + new Vector3(0, i-1.2f, 0) * -200; // position delta
 
             HighScorePanelController controller = spawn.GetComponent<HighScorePanelController>();
 
