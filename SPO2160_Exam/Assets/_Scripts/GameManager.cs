@@ -51,7 +51,7 @@ public class GameManager : MonoBehaviour
         // Split string using space, semi colon, comma, dot
         if (www.downloadHandler.text.Length > 1)
         {
-            Debug.Log("More than one character received");
+            Debug.Log("Ghost Data downloaded");
             ghostInputData.ClearReplay();
             //Split string into two parts using string.split
             inputs = www.downloadHandler.text.Split(';');
@@ -59,26 +59,41 @@ public class GameManager : MonoBehaviour
             string[] positions = inputs[0].Split(':');
             foreach(string pos in positions)
             {
+                if(pos == "")
+                    break;
                 string[] f = pos.Split(',');
-                float x = float.Parse(f[0]);
-                float y = float.Parse(f[1]);
-                float z = float.Parse(f[2]);
+                string a = f[0].Trim('(', ')');
+                string b = f[1].Trim('(', ')');
+                string c = f[2].Trim('(', ')');
+
+                float x = float.Parse(a);
+                float y = float.Parse(b);
+                float z = float.Parse(c);
+
                 Vector3 _pos = new Vector3(x, y, z);
                 ghostInputData.position.Add(_pos);
             }
             string[] rotations = inputs[1].Split(':');
             foreach(string rot in rotations)
             {
+                if(rot == "")
+                    break;
                 string[] q = rot.Split(',');
-                float x = float.Parse(q[0]);
-                float y = float.Parse(q[1]);
-                float z = float.Parse(q[2]);
+                string a = q[0].Trim('(', ')');
+                string b = q[1].Trim('(', ')');
+                string c = q[2].Trim('(', ')');
+
+                float x = float.Parse(a);
+                float y = float.Parse(b);
+                float z = float.Parse(c);
                 Vector3 _rot = new Vector3(x, y, z);
                 ghostInputData.rotation.Add(_rot);
             }
             string[] timestamps = inputs[2].Split(':');
             foreach (string time in timestamps)
             {
+                if(time == "")
+                    break;
                 ghostInputData.timeStamp.Add(float.Parse(time));
             }
         }
