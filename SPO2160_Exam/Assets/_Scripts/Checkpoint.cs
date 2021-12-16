@@ -9,6 +9,7 @@ public class Score
 public class Checkpoint : MonoBehaviour
 {
     public int checkpointNumb;
+    public Checkpoint goalCheckpointMEGA;
     public bool checkpointMEGA = false;
     public bool isGoldenRoad = false;
     public static int currentCheckpoint;
@@ -65,27 +66,32 @@ public class Checkpoint : MonoBehaviour
         {
             //insert code to show time.
         }
-        
-         if(Goal == true && currentCheckpoint > 10 && other.tag == "Player" || other.tag == "Player" && checkpointMEGA == true && Goal == true)
-        {
 
-            RoundOver = true;
-            PlayerLap = true;
-
-        }
-        if(other.tag == "Player")
+        if (other.tag == "Player")
         {
             // Ghost.currentCheckPoint++;
-            if(currentCheckpoint == checkpointNumb)
+            if (currentCheckpoint == checkpointNumb)
             {
                 Passed = true;
                 currentCheckpoint++;
             }
-            else if(isGoldenRoad == true)
+
+            if (isGoldenRoad == true)
             {
-                checkpointMEGA = true;
+                goalCheckpointMEGA.checkpointMEGA = true;
             }
         }
+
+
+        if (Goal == true && currentCheckpoint > 10 && other.tag == "Player" || checkpointMEGA == true && other.tag == "Player" && Goal == true)
+        {
+
+            RoundOver = true;
+            PlayerLap = true;
+            checkpointMEGA = false;
+
+        }
+       
         if(other.tag == "Ghost" && Goal == true)
         {
             GhostLap = true;

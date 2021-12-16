@@ -12,6 +12,7 @@ TagManager:
   - SuperSpeedZone
   - WallController
   - GoldenRoad
+  - GoldenRoadController
   layers:
   - Default
   - TransparentFX

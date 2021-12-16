@@ -11,7 +11,7 @@ public class BoostController : MonoBehaviour
     public float BoostAmount;
     public float JumpAmount;
     public float SuperBoostAmount;
-    public GameObject wallOfChina;
+    public GameObject wallOfChina, goldenRoad;
     public float wallActiveTime = 5f;
 
     // Start is called before the first frame update
@@ -46,6 +46,12 @@ public class BoostController : MonoBehaviour
         {
             StopCoroutine(WallTimer());
             StartCoroutine(WallTimer());
+            Destroy(other.gameObject);
+        }
+
+        if (other.CompareTag("GoldenRoadController"))
+        {
+            goldenRoad.SetActive(true);
             Destroy(other.gameObject);
         }
 
