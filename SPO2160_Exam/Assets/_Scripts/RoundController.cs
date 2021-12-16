@@ -19,7 +19,7 @@ public class RoundController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       if(GoalCheck.currentlap > GoalCheck.maxlap)
+       if(GoalCheck.currentlap >= GoalCheck.maxlap)
         {
             SceneManager.LoadScene("GameOverScene");
         }
