@@ -164,6 +164,7 @@ public class CommunicationController : MonoBehaviour
                     PlayerPrefs.DeleteKey("Date");
                     loginCanvas.gameObject.SetActive(true);
                     logoutCanvas.gameObject.SetActive(false);
+                    errorCanvas.gameObject.SetActive(false);
                     usernameText.text = passwordText.text = "";
                     username = password = "";
                     loginButton.interactable = false;
