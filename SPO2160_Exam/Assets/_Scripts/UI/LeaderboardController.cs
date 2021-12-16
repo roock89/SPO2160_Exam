@@ -78,7 +78,7 @@ public class LeaderboardController : MonoBehaviour
             if(_split.Length > 1)
             {
                 controller.PlayerText.text = _split[0];
-                controller.ScoreText.text = _split[1]; 
+                controller.ScoreText.text =  (float.Parse(_split[1])/ 60).ToString("00") + ":" + (float.Parse(_split[1])%60).ToString("00"); 
                 // Debug.LogWarning(_split[2]);
                 int.TryParse(_split[2], out controller.scoreID);
             }

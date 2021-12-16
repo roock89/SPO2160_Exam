@@ -23,7 +23,7 @@ public class GameOverManager : MonoBehaviour
         List<IMultipartFormSection> formData = new List<IMultipartFormSection>();
 
         // Add username and password as separate form data sections!
-        formData.Add(new MultipartFormDataSection("score", data.lapTime.ToString()));
+        formData.Add(new MultipartFormDataSection("time", data.lapTime.ToString()));
 
         string positionData = "";
         foreach(Vector3 pos in data.position)
@@ -40,7 +40,7 @@ public class GameOverManager : MonoBehaviour
         {
             positionData += time + ":";
         }
-        formData.Add(new MultipartFormDataSection("input", positionData));
+        formData.Add(new MultipartFormDataSection("ghostInput", positionData));
 
         UnityWebRequest www = UnityWebRequest.Post(uri, formData);
         yield return www.SendWebRequest();

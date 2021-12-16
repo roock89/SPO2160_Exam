@@ -1456,7 +1456,7 @@ MonoBehaviour:
   _highScorePanel: {fileID: 2801114520003913723, guid: 1c0b0064e05205c4b8b78c881bc24762,
     type: 3}
   ScrollContent: {fileID: 916785516}
-  HighscoreURL: https://hera.nord.no/~351064/TANK/lobby/highscorelist.php
+  HighscoreURL: https://hera.nord.no/~344423/SPO_2160/ExamTask6/include/highscorelist.php
   scores: []
 --- !u!1 &591937216
 GameObject:
@@ -2307,9 +2307,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3f4b3939397b10429ff0df1fd84ae81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loginUrl: https://hera.nord.no/~351064/TANK/lobby/login.php
-  logoutUrl: https://hera.nord.no/~351064/TANK/lobby/logout.php
-  registerUrl: https://hera.nord.no/~351064/SPO21/lobby/registeruser.php
+  loginUrl: https://hera.nord.no/~344423/SPO_2160/ExamTask6/include/login.php
+  logoutUrl: https://hera.nord.no/~344423/SPO_2160/ExamTask6/include/logout.php
+  registerUrl: https://hera.nord.no/~344423/SPO_2160/ExamTask6/lobby/registeruser.php
   loginCanvas: {fileID: 64738453}
   logoutCanvas: {fileID: 603602812}
   errorCanvas: {fileID: 24923508}
@@ -4388,7 +4388,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ghostInputData: {fileID: 11400000, guid: 765667d15cdcc3e42929cedfc296565f, type: 2}
-  GhostDataURL: https://hera.nord.no/~351064/TANK/lobby/DownloadGhostData.php
+  GhostDataURL: https://hera.nord.no/~344423/SPO_2160/ExamTask6/include/DownloadGhostData.php
 --- !u!4 &1884201148
 Transform:
   m_ObjectHideFlags: 0

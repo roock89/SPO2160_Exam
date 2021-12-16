@@ -52,6 +52,7 @@ public class GameManager : MonoBehaviour
         if (www.downloadHandler.text.Length > 1)
         {
             Debug.Log("More than one character received");
+            ghostInputData.ClearReplay();
             //Split string into two parts using string.split
             inputs = www.downloadHandler.text.Split(';');
 
