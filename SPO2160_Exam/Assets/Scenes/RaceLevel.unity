@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.09181083, g: 0.093374155, b: 0.1518588, a: 1}
+  m_IndirectSpecularColor: {r: 0.09181083, g: 0.09337396, b: 0.1518588, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -22445,7 +22445,7 @@ MonoBehaviour:
   timesFallen: 0
   lives: 3
   ghost: {fileID: 11400000, guid: 8acf0ef8cea5c5946a9ab305c7e2096d, type: 2}
-  PlayerRigidbody: {fileID: 0}
+  PlayerRigidbody: {fileID: 2263101069379132315}
   ButtonRespawn: {fileID: 2263101069379132314}
   healthText: {fileID: 1190342362}
 --- !u!65 &1675427924
@@ -28039,6 +28039,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b6ff4933aa54441976e5c68467e456, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!54 &2263101069379132315 stripped
+Rigidbody:
+  m_CorrespondingSourceObject: {fileID: 2281140409455543548, guid: 2853cc71c2997394a975c0a9e586b1fa,
+    type: 3}
+  m_PrefabInstance: {fileID: 2263101069379132313}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6021857033893518546
 PrefabInstance:
   m_ObjectHideFlags: 0
