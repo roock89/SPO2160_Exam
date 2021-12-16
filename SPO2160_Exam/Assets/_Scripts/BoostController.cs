@@ -45,6 +45,7 @@ public class BoostController : MonoBehaviour
         if (other.CompareTag("SuperSpeedZone"))
         {
             rb.velocity += (SuperBoostAmount / 5) * transform.forward;
+            rb.velocity += -10 * transform.up;
         }
         
     }
