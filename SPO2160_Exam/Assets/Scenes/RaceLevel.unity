@@ -8331,7 +8331,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &621474491
 Transform:
   m_ObjectHideFlags: 0
@@ -27924,6 +27924,11 @@ PrefabInstance:
         type: 3}
       propertyPath: CarConfig.HelpSteerPower
       value: 0.199
+      objectReference: {fileID: 0}
+    - target: {fileID: 2233075394096852920, guid: 2853cc71c2997394a975c0a9e586b1fa,
+        type: 3}
+      propertyPath: CarConfig.MaxBrakeTorque
+      value: 4000
       objectReference: {fileID: 0}
     - target: {fileID: 2233075394096852920, guid: 2853cc71c2997394a975c0a9e586b1fa,
         type: 3}
