@@ -6,10 +6,19 @@ using UnityEngine.UI;
 public class GameOver : MonoBehaviour
 {
     public Text scoreText;
+    public Text gameoverText;
 
     // Update is called once per frame
     void Update()
     {
-        scoreText.text = "Your time was: " + (Score.LapTime / 60).ToString("00") + ":" + (Score.LapTime%60).ToString("00");
+        if(Score.LapTime != 0)
+        {
+            scoreText.text = "Your time was: " + (Score.LapTime / 60).ToString("00") + ":" + (Score.LapTime%60).ToString("00");
+        }
+        else
+        {
+            scoreText.text = "";
+            gameoverText.text = "You failed";
+        }
     }
 }

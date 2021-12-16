@@ -13,7 +13,8 @@ public class GameOverManager : MonoBehaviour
     void Start()
     {
         playerData.lapTime = Score.LapTime;
-        StartCoroutine(SavingScore(savingScoreURL, playerData));
+        if(playerData.lapTime != 0)
+            StartCoroutine(SavingScore(savingScoreURL, playerData));
     }
 
     public IEnumerator SavingScore(string uri, GhostHolder data)
