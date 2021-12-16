@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.SceneManagement;
+using System.Globalization;
 
 public class GameManager : MonoBehaviour
 {
@@ -67,9 +68,9 @@ public class GameManager : MonoBehaviour
                 string b = f[1].Trim('(', ')');
                 string c = f[2].Trim('(', ')');
 
-                float x = float.Parse(a);
-                float y = float.Parse(b);
-                float z = float.Parse(c);
+                float x = float.Parse(a, NumberStyles.Float);
+                float y = float.Parse(b, NumberStyles.Float);
+                float z = float.Parse(c, NumberStyles.Float);
 
                 Vector3 _pos = new Vector3(x, y, z);
                 ghostInputData.position.Add(_pos);
@@ -84,9 +85,9 @@ public class GameManager : MonoBehaviour
                 string b = q[1].Trim('(', ')');
                 string c = q[2].Trim('(', ')');
 
-                float x = float.Parse(a);
-                float y = float.Parse(b);
-                float z = float.Parse(c);
+                float x = float.Parse(a, NumberStyles.Float);
+                float y = float.Parse(b, NumberStyles.Float);
+                float z = float.Parse(c, NumberStyles.Float);
                 Vector3 _rot = new Vector3(x, y, z);
                 ghostInputData.rotation.Add(_rot);
             }
@@ -95,7 +96,7 @@ public class GameManager : MonoBehaviour
             {
                 if(time == "")
                     break;
-                ghostInputData.timeStamp.Add(float.Parse(time));
+                ghostInputData.timeStamp.Add(float.Parse(time, NumberStyles.Float));
             }
         }
         else
