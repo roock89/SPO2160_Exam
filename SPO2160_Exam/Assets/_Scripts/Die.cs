@@ -2,13 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Die : MonoBehaviour
 {
-    public int timesFallen = 0;
+    public int timesFallen = 0, lives = 3;
     public GhostHolder ghost;
     public Rigidbody PlayerRigidbody;
     public DieAndRespawn ButtonRespawn;
+    public Text healthText;
     private void Update()
     {
         //Press R to reset to previous checkpoint.
@@ -18,6 +20,7 @@ public class Die : MonoBehaviour
                 PlayerRigidbody.velocity = Vector3.zero;
                // timesFallen++;
         }
+        healthText.text = "lives: " + lives;
     }
     //OnTrigger collects the RigidBody and DieAndRespawn script from the player
     void OnTriggerEnter(Collider other)
@@ -27,6 +30,7 @@ public class Die : MonoBehaviour
             Rigidbody rb = other.GetComponent<Rigidbody>();
             DieAndRespawn respawn = other.GetComponent<DieAndRespawn>();
             timesFallen++;
+            lives--;
 
             //If the DieAndRespawn is found, run the HitAndRespawn method of that script and set the players velocity to 0
             if (respawn != null)
@@ -36,7 +40,6 @@ public class Die : MonoBehaviour
             }
             if (timesFallen >= 3)
             {
-                Debug.Log("noob");
                 // Remove ghost data
                 ghost.ClearReplay();
 
