@@ -13,7 +13,7 @@ public class Checkpoint : MonoBehaviour
     public bool checkpointMEGA = false;
     public bool isGoldenRoad = false;
     public static int currentCheckpoint;
-    public int maxlap = 3, currentlap;
+    public int maxlap = 1, currentlap;
     public float Timer;
     public bool Passed, RoundOver, Goal, GhostLap,PlayerLap;
     public RoundController RC;

@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 public class RoundController : MonoBehaviour
 {
     public Checkpoint[] CheckPoints;
+    public Checkpoint GoalCheck;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,7 +19,10 @@ public class RoundController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
+       if(GoalCheck.currentlap > GoalCheck.maxlap)
+        {
+            SceneManager.LoadScene("GameOverScene");
+        }
         if(Checkpoint.currentCheckpoint == CheckPoints.Length)
             SceneManager.LoadScene("GameOverScene");
     }
