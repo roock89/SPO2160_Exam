@@ -59,6 +59,7 @@ public class GameManager : MonoBehaviour
             string[] positions = inputs[0].Split(':');
             foreach(string pos in positions)
             {
+                Debug.Log(pos);
                 if(pos == "")
                     break;
                 string[] f = pos.Split(',');
