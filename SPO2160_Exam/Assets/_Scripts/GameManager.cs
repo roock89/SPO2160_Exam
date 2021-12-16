@@ -18,7 +18,6 @@ public class GameManager : MonoBehaviour
         {
             Camera.main.GetComponent<CommunicationController>().enabled = true;
         }
-
     }
 
     void Start()

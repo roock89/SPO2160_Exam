@@ -13,7 +13,11 @@ public class GameOver : MonoBehaviour
     {
         if(Score.LapTime != 0)
         {
-            scoreText.text = "Your time was: " + (Score.LapTime / 60).ToString("00") + ":" + (Score.LapTime%60).ToString("00");
+            string seconds = (int)Score.LapTime%60 + "";
+            if(seconds.ToCharArray().Length == 1)
+                seconds = "0" + seconds;
+
+            scoreText.text = "Your time was: " + (Score.LapTime / 60) + ":" + seconds;
         }
         else
         {

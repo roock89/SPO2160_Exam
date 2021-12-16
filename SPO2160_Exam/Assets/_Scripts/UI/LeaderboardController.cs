@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
+using System.Globalization;
+
 
 
 public class LeaderboardController : MonoBehaviour
@@ -78,7 +80,13 @@ public class LeaderboardController : MonoBehaviour
             if(_split.Length > 1)
             {
                 controller.PlayerText.text = _split[0];
-                controller.ScoreText.text =  (float.Parse(_split[1])/ 60).ToString("00") + ":" + (float.Parse(_split[1])%60).ToString("00"); 
+                string minutes = int.Parse(_split[1])/60 + "";
+                string seconds = int.Parse(_split[1])%60 + "";
+                if(minutes.ToCharArray().Length == 1)
+                    minutes = "0" + minutes;
+                if(seconds.ToCharArray().Length == 1)
+                    seconds = "0" + seconds;
+                controller.ScoreText.text =  minutes + ":" + seconds; 
                 
                 // Debug.LogWarning(_split[2]);
                 int.TryParse(_split[2], out controller.scoreID);
