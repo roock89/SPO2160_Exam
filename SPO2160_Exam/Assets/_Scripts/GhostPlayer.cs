@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class GhostPlayer : MonoBehaviour
 {
-    public GameManager GM;
     public GhostHolder ghost;
     private float timeValue;
     private int index1, index2;
