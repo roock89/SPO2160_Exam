@@ -942,8 +942,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 996758088}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: ShowLogout
+        m_TargetAssemblyTypeName: CommunicationController, Assembly-CSharp
+        m_MethodName: LogoutUser
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4309,8 +4309,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 996758088}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: ShowLogin
+        m_TargetAssemblyTypeName: CommunicationController, Assembly-CSharp
+        m_MethodName: LogoutUser
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
