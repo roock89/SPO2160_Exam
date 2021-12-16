@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
 using System.Globalization;
+using System;
 
 
 
@@ -76,6 +77,19 @@ public class LeaderboardController : MonoBehaviour
             spawn.transform.localPosition = StartPos + new Vector3(0, i, 0) * -200; // position delta
 
             HighScorePanelController controller = spawn.GetComponent<HighScorePanelController>();
+
+            /*
+            ! reversing the scores work, but the format is wrong, for some reason the last (now first) score breaks after reversing.
+            
+            string[] reversed = new string[scores.Length];
+            for(int j = 0; j < reversed.Length-1; j++)
+            {
+                reversed[j] = scores[scores.Length-1 - j];
+                Debug.Log(reversed[j]);
+            }
+            scores = reversed;
+            */
+
             string[] _split = scores[i].Split(':');
             if(_split.Length > 1)
             {
@@ -93,7 +107,7 @@ public class LeaderboardController : MonoBehaviour
             }
             else
                 controller.PlayerText.text = _split[0];
-            Debug.Log(spawn);
+            // Debug.Log(spawn);
         }
         ScrollContent.transform.position -= new Vector3(0, 100 ,0); // correct starting position. might need a bigger number if loading more than 10 highscores
         
